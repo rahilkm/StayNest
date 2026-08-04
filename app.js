@@ -96,7 +96,9 @@ app.get("/demouser", async (req, res) => {
 
 // const MONGO_URL = "mongodb://127.0.0.1:27017/StayNest";
 
-
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+})
 
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
